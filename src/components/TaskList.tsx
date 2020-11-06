@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useState } from 'react';
 import { useRecoilState } from 'recoil';
 import { ITask, taskListState } from '../data/TaskList.recoil';
-
+import { Button} from 'react-bootstrap'
 
 function TaskList(){
 
@@ -69,7 +69,7 @@ function TaskList(){
             <h1>Create To Do List Item</h1>
             <div className="task-create-form">
                 <textarea value={newTaskDescription} style={{ width: '100%', height:"150px" }} onChange={onChangeNewTaskDescription} />
-                <button onClick={onClickAdd}>Add to Task List</button>
+                <Button variant="primary" onClick={onClickAdd}>Add to Task List</Button>
             </div>
         </div>
     );
